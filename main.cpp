@@ -57,6 +57,7 @@ int main()
   <table class="chessboard">
     <caption>1. e2-e4</caption>
     <tr>
+      <caption>a</caption>
       <td><span class="black rook"></span></td>
       <td><span class="black knight"></span></td>
       <td><span class="black bishop"></span></td>
@@ -77,44 +78,44 @@ int main()
       <td><span class="black pawn"></span></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+     <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><span class="white pawn"></span></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
+      <td><span class=""></span></td>
     </tr>
     <tr>
       <td><span class="white pawn"></span></td>
