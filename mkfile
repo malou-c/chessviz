@@ -1,7 +1,7 @@
 all: start
 	
 start: main.o FileWork.o
-	g++ main.o FileWork.o -o sp
+	g++ main.o FileWork.o -o sp.exe
 
 main.o: main.cpp
 	g++ -c main.cpp
@@ -9,5 +9,5 @@ main.o: main.cpp
 FileWork.o: FileWork.cpp
 	g++ -c FileWork.cpp
 
-clean: 
-	rm *.o
+clean:  
+	rm -rf *.o *.exe *.html
