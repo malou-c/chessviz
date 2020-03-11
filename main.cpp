@@ -122,7 +122,7 @@ int main()
       <td><span class="white pawn"></span></td>
       <td><span class="white pawn"></span></td>
       <td><span class="white pawn"></span></td>
-      <td></td>
+      <td><span class="white pawn"></span></td>
       <td><span class="white pawn"></span></td>
       <td><span class="white pawn"></span></td>
       <td><span class="white pawn"></span></td>
@@ -143,6 +143,7 @@ int main()
 
     FileWork fw;
     fw.add_msg(chesse_html, path);
+    std::cout << "open browser" << std::endl;
     system("xdg-open chesse.html");
     return 0;
 }
