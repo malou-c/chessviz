@@ -1,12 +1,12 @@
 all: start
 	
 start: main.o FileWork.o
-	g++ main.o FileWork.o -o sp.exe
+	g++ -Wall main.o FileWork.o -o sp.exe
 
 main.o: main.cpp
 	g++ -c main.cpp
 
-FileWork.o: FileWork.cpp
+FileWork.o: 
 	g++ -c FileWork.cpp
 
 clean:  
