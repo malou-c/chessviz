@@ -71,7 +71,6 @@ void FileWork::draw_head(string path)
 
     } else {
         cout << "error file" << endl;
-        cout << "error file2" << endl;
     }
     fs.close();
 }

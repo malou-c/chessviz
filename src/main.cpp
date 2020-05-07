@@ -144,7 +144,7 @@ int main()
     FileWork fw;
     fw.add_msg(chesse_html, path);
     std::cout << "open browser,yeah" << std::endl;
-    std::cout << "sfsdsad qdsad" << std::endl;
+    std::cout << "sfsdsad qdsssad" << std::endl;
 
     system("xdg-open chesse.html");
     return 0;
