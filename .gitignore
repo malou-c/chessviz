@@ -6,3 +6,4 @@
 /*.exe
 build/*.o
 build/*.d
+/*.vscode

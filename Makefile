@@ -3,12 +3,14 @@
 CC = g++
 CFLAGS = -c -MP -MMD -Wall -Werror
 SRC_PATH = src/
-SRC = src/main.cpp src/FileWork.cpp
-OBJ = build/FileWork.o build/main.o
+SRC = src/main.cpp src/FileWork.cpp src/map.cpp
+OBJ = build/FileWork.o build/main.o build/map.o
+DFILE = $(wildcard *.d))
 EXEC = sp.exe
 
-
 all: $(SRC) $(EXEC) 
+
+include build/*.d
 
 $(EXEC): $(OBJ)
 	$(CC) $(OBJ) -o $@
@@ -16,7 +18,6 @@ $(EXEC): $(OBJ)
 build/%.o: src/%.cpp	
 	$(CC) $(CFLAGS) $< -o $@
 
-include $(OBJ:.o=.d)
 
 clean:  
-	rm -rf build/*.o *.html
+	rm -rf build/*.o build/*.d *.html
