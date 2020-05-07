@@ -6,5 +6,6 @@
 class FileWork {
 public:
     void add_msg(std::string msg, std::string path);
+
     void draw_head(std::string path);
 };
