@@ -8,7 +8,6 @@ void FileWork::add_msg(string msg, string path)
 {
     fs.open(path, fs.out | fs.app);
     if (fs.is_open()) {
-        cout << "file open" << endl;
         fs << msg;
 
     } else {
@@ -16,9 +15,9 @@ void FileWork::add_msg(string msg, string path)
     }
     fs.close();
 }
-void FileWork::draw_head(string path)
+void FileWork::add_head(string path)
 {
-    string msg = R"( 
+    string head = R"( 
  <!DOCTYPE html>
 <html>
 <head>
@@ -62,13 +61,143 @@ void FileWork::draw_head(string path)
     table.chessboard .black.knight:before { content: "\265E"; }
     table.chessboard .black.pawn:before   { content: "\265F"; }
   </style>
-</head>)";
+</head>
+<body>)";
+    fs.open(path, fs.out | fs.trunc);
+    if (fs.is_open()) {
+        fs << head;
+
+    } else {
+        cout << "error file" << endl;
+    }
+    fs.close();
+}
+
+void FileWork::add_step(std::string step, std::string path)
+{
+    string msg = R"(
+    <table class="chessboard">
+    <caption>)"
+            + step + "</caption>";
+
     fs.open(path, fs.out | fs.app);
     if (fs.is_open()) {
-        cout << "File open" << endl;
-
         fs << msg;
+    } else {
+        cout << "error file" << endl;
+    }
+    fs.close();
+}
 
+void FileWork::add_end(std::string path)
+{
+    string msg = R"(
+        
+      </body>
+      </html>
+    )";
+
+    fs.open(path, fs.out | fs.app);
+    if (fs.is_open()) {
+        fs << msg;
+    } else {
+        cout << "error file" << endl;
+    }
+    fs.close();
+}
+
+void FileWork::add_error(std::string step, std::string path)
+{
+    string msg = R"(
+    <p> <font size="5" color="black" face="Arial">Статус нотации: </font> 
+    <font size="5" color="red" face="Arial">Bad</font></p>
+
+    <b> <font size="5" color="black" face="Arial">Ход с ошибкой: )"
+            + step + "</font></b>";
+
+    fs.open(path, fs.out | fs.app);
+    if (fs.is_open()) {
+        fs << msg;
+    } else {
+        cout << "error file" << endl;
+    }
+    fs.close();
+}
+void FileWork::add_complete(std::string path)
+{
+    string msg = R"(
+    <p> <font size="5" color="black" face="Arial">Статус нотации: </font> 
+    <font size="5" color="green" face="Arial">Good</font></p>
+
+    )";
+
+    fs.open(path, fs.out | fs.app);
+    if (fs.is_open()) {
+        fs << msg;
+    } else {
+        cout << "error file" << endl;
+    }
+    fs.close();
+}
+
+void FileWork::add_figure(char figure, std::string path)
+{
+    string str_fig = "";
+    switch (figure) {
+        //белые
+    case 'k':
+        str_fig = "white king";
+        break;
+    case 'q':
+        str_fig = "white queen";
+        break;
+    case 'r':
+        str_fig = "white rook";
+        break;
+    case 'n':
+        str_fig = "white knight";
+        break;
+    case 'b':
+        str_fig = "white bishop";
+        break;
+    case 'p':
+        str_fig = "white pawn";
+        break;
+        //черные
+    case 'K':
+        str_fig = "black king";
+        break;
+    case 'Q':
+        str_fig = "black queen";
+        break;
+    case 'R':
+        str_fig = "black rook";
+        break;
+    case 'N':
+        str_fig = "black knight";
+        break;
+    case 'B':
+        str_fig = "black bishop";
+        break;
+    case 'P':
+        str_fig = "black pawn";
+        break;
+        // пустое поле
+    case ' ':
+        str_fig = " ";
+        break;
+
+    default:
+        std::cout << "error read figure: not found";
+        break;
+    }
+    string msg = R"(
+      <td><span class=")"
+            + str_fig + R"("></span></td>)";
+
+    fs.open(path, fs.out | fs.app);
+    if (fs.is_open()) {
+        fs << msg;
     } else {
         cout << "error file" << endl;
     }
