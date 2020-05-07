@@ -1,5 +1,5 @@
-# Используем дистрибутив Ubuntu 16.04,
-# т.к. в образе предустановлен clang-format версии 7.
+language: C++
+
 dist: xenial
 
 script:
