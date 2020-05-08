@@ -4,6 +4,8 @@
 /#main.c#
 /*.html
 /*.exe
-build/*.o
-build/*.d
+build/src/*.o
+build/src/*.d
+build/test/*.o
+build/test/*.d
 /*.vscode

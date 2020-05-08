@@ -1,0 +1,14 @@
+
+      <td><span class="black queen"></span></td>
+      <td><span class="black king"></span></td>
+      <td><span class="black pawn"></span></td>
+      <td><span class="black bishop"></span></td>
+      <td><span class="black knight"></span></td>
+      <td><span class="black rook"></span></td>
+      <td><span class="white queen"></span></td>
+      <td><span class="white king"></span></td>
+      <td><span class="white pawn"></span></td>
+      <td><span class="white bishop"></span></td>
+      <td><span class="white knight"></span></td>
+      <td><span class="white rook"></span></td>
+      <td><span class=" "></span></td>
