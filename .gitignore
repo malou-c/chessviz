@@ -6,4 +6,6 @@
 /*.exe
 build/*.o
 build/*.d
+build/test/*.o
+build/test/*.d
 /*.vscode
