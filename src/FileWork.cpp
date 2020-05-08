@@ -140,7 +140,7 @@ void FileWork::add_complete(std::string path)
     fs.close();
 }
 
-void FileWork::add_figure(char figure, std::string path)
+bool FileWork::add_figure(char figure, std::string path)
 {
     string str_fig = "";
     switch (figure) {
@@ -189,6 +189,7 @@ void FileWork::add_figure(char figure, std::string path)
 
     default:
         std::cout << "error read figure: not found";
+        return false;
         break;
     }
     string msg = R"(
@@ -202,4 +203,5 @@ void FileWork::add_figure(char figure, std::string path)
         cout << "error file" << endl;
     }
     fs.close();
+    return true;
 }
