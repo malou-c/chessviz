@@ -56,12 +56,13 @@ bool Map::CN_typemove()
                 return false;
             }
             if (typemove[i] == '-' && map[cell_pos.x][cell_pos.y] != ' ') {
-                std::cout << "error: cell have figure, need void cell";
+                std::cout << "error: cell have figure, need void cell"
+                          << std::endl;
                 return false;
             }
             if (typemove[i] == 'x' && map[cell_pos.x][cell_pos.y] == ' ') {
-                std::cout
-                        << "error: cell dont have figure, need figure in cell";
+                std::cout << "error: cell dont have figure, need figure in cell"
+                          << std::endl;
                 return false;
             }
             //ставим на клетку фигуру
@@ -85,10 +86,6 @@ bool Map::CN_cellfig()
 
         return true;
     } else {
-        std::cout << map[cell_pos.x][cell_pos.y] << std::endl;
-        std::cout << cell_pos.x << "  " << cell_pos.y << std::endl;
-        std::cout << (int)map[cell_pos.x][cell_pos.y] << std::endl;
-        std::cout << (int)step_fig << std::endl;
         return false;
     }
 }

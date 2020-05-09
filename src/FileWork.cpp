@@ -188,7 +188,7 @@ bool FileWork::add_figure(char figure, std::string path)
         break;
 
     default:
-        std::cout << "error read figure: not found";
+        std::cout << "error read figure: not found" << std::endl;
         return false;
         break;
     }
