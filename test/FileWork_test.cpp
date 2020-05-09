@@ -34,7 +34,7 @@ TEST_CASE("FW: add_msg()", "[FW]")
         file >> step;
         msg_in_file += step;
     }
-    REQUIRE(msg_in_file == test_msg);
+    CHECK(msg_in_file == test_msg);
     file.close();
 }
 
@@ -50,10 +50,10 @@ TEST_CASE("FW: add_figure()", "[FW]")
 
     //проверяем на правильных фигурах
     for (int i = 0; i < (int)test_fig.size(); i++) {
-        REQUIRE(testfw.add_figure(test_fig[i], path));
+        CHECK(testfw.add_figure(test_fig[i], path));
     }
     //проверяем на неправильных фигурах
     for (int i = 0; i < (int)wrong_fig.size(); i++) {
-        REQUIRE(!testfw.add_figure(wrong_fig[i], path));
+        CHECK(!testfw.add_figure(wrong_fig[i], path));
     }
 }
