@@ -22,10 +22,11 @@ build/src/%.o: src/%.cpp
 
 #tests
 T_EXEC = test.exe
+#меняет мейн на тестовый мейн
 T_SRC = $(SRC:src/main.cpp=test/main.cpp)
-TEST_SRC = test/FileWork_test.cpp
+TEST_SRC = test/FileWork_test.cpp test/map_test.cpp
 TO_PATH = build/test/
-T_OBJ = $(TO_PATH)main.o $(TO_PATH)FileWork_test.o build/src/FileWork.o
+T_OBJ = $(TO_PATH)main.o $(TO_PATH)FileWork_test.o $(TO_PATH)map_test.o build/src/FileWork.o build/src/map.o
 
 test: $(T_SRC) $(TEST_SRC) $(T_EXEC)
 
