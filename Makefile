@@ -18,8 +18,6 @@ build/src/%.o: src/%.cpp
 	
 -include build/src/*.d
 
-
-
 #tests
 T_EXEC = test.exe
 #меняет мейн на тестовый мейн
@@ -29,8 +27,6 @@ TO_PATH = build/test/
 T_OBJ = $(TO_PATH)main.o $(TO_PATH)FileWork_test.o $(TO_PATH)map_test.o build/src/FileWork.o build/src/map.o
 
 test: $(T_SRC) $(TEST_SRC) $(T_EXEC)
-
-
 
 $(T_EXEC): $(T_OBJ)
 	$(CC) $(T_OBJ) -o $@
