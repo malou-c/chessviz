@@ -1,7 +1,7 @@
 .PHONY: all clean install uninstall 
 
 CC = g++
-CFLAGS = -c -MP -MMD 
+CFLAGS = -std=c++11 -c -MP -MMD -Wall -Werror
 SRC_PATH = src/
 SRC = src/main.cpp src/FileWork.cpp src/map.cpp
 OBJ = build/src/FileWork.o build/src/main.o build/src/map.o
