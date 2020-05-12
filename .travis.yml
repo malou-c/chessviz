@@ -1,4 +1,4 @@
-language: C++
+language: cpp
 
 dist: xenial
 
@@ -7,3 +7,6 @@ script:
   - make
   - make test
   - ./test.exe
+
+compiler: gcc
+  
